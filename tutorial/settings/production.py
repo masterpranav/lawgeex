@@ -25,7 +25,7 @@ SECRET_KEY = 'j@5lb)el1j%&k2hce52@uw^eb*pepg=)zv+r=&d(4j$18f+)04'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.kirr.com','kirr.co']
+ALLOWED_HOSTS = ['www.kirr.com','kirr.co','https://pranav07.herokuapp.com/']
 
 
 # Application definition
