@@ -60,8 +60,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'tutorial.urls'
 ROOT_HOSTCONF='tutorial.hosts'
 DEFAULT_HOST='www'
-DEFAULT_REDIRECT_URL="http://www.kirr.co"
-PARENT_HOST="kirr.co"
+DEFAULT_REDIRECT_URL="http://pranavchaturvedi.in"
+PARENT_HOST="pranavchaturvedi.in"
 
 TEMPLATES = [
     {
