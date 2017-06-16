@@ -1,0 +1,14 @@
+{% extends "base_shortener.html" %}
+{% block title %}
+{{ object.shortcode }} | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<div>
+	<h1>Exists</h1>
+	<p>{{ object.url }}</p>
+	<p>Count: {{ object.clickevent.count }}</p>
+	<p><a class='btn btn-link' href='{{ object.get_short_url }}'>{{ object.get_short_url }}</a></p>
+	<a class='btn btn-default' href='/'>+ New</a>
+</div>
+{% endblock content %}

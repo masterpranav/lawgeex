@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+<h1>Home</h1>
+{% block head %}
+	<title>Home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid header">
+<div class="container">
+<div class="row">
+
+<h2>Myadvo</h2>
+
+</div>
+</div>
+</div>
+<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="container-fluid">
+		<div class="container">
+		<div class="row">
+		<div class="col-md-4 ">
+			</div>
+		<div class="col-md-4 login">
+		<div class="row">
+		<div class="col-md-4 color">
+		Title
+		</div>
+		<div class="col-md-8">
+		<input type="text" name="title" value="" class="loginid" required>
+		</div>
+		</div>
+		<div class="row">
+		<div class="col-md-4 color">
+		Document
+		</div>
+		<div class="col-md-8">
+		<input type="file" name="doc" style="margin-top:50px" required>
+		</div>
+		</div>
+		<div class="row text-center">
+		<div class="col-md-4 color">
+
+		</div>
+		<div class="col-md-4">
+		<input type="submit" name="upload" value="upload" class="btn_margin btn btn-default">
+		</div>
+		<div class="col-md-4 color">
+
+		</div>
+		</div>
+		</div>
+		<div class="col-md-4 "></div>
+
+		</div>
+		</div>
+		</div>
+</form>
+<div class="container-fluid footer">
+<div class="container">
+<div class="row">
+<h1>www.myadvo.in</h1>
+
+</div>
+</div>
+</div>
+
+<!--
+<script>
+$(document).ready(function(){
+
+$("#add").click(function(e){
+$("#items").append('<div>Name: <input type="text" name="FirstName" >'+'<input type="button" value="delete"  id="delete" /></div>');
+});
+
+$('body').on('click','#delete',function(e){
+	$(this).parent('div').remove();
+});
+});
+</script>
+-->
+{% endblock %}

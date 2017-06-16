@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<title>Url.co | {% block title %}Shorten that Url{% endblock title %}</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+<style>
+body {
+	background-color: #226268;
+  background-image:url('http://www.desktopwallpaperhd.net/wallpapers/15/7/spitsbergen-norway-mountain-reflections-background-image-travel-wallpaper-150999.jpg');
+  background-size: cover; 
+}
+.btn-link {
+  color: #30f;
+}
+/*.btn-link:hover {
+  color: #00000;
+}*/
+</style>
+</head>
+<body>
+<div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+          {% block content %}
+			{% endblock content %}
+          
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+</body>
+</html>

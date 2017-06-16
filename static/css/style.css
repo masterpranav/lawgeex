@@ -1,0 +1,73 @@
+body{
+background: black;
+}
+
+
+.header{
+	height:100px;
+	background: black;
+	
+	
+	width:100%;
+	
+}
+
+
+
+.header h2{
+	color:white;
+	
+	text-align: center;
+}
+
+.login{
+	
+	background: white;
+	margin-top: 50px;
+	margin-bottom: 50px;
+color:black;
+}
+.footer{
+width:100%;
+	height:200px;
+	background:black;
+	text-align: center;
+}
+
+.loginid{
+	width:80%;
+	background: white;
+	margin-top: 50px;
+	border:none;
+border-bottom: 1px solid blue;
+}
+.color{
+	
+	font-size: 20px;
+	margin-top: 50px;
+}
+.section h1{
+text-align: center;
+}
+.btn_margin{
+	margin-top:30px;
+	margin-bottom:30px;
+	width:100px;
+	
+}
+.section textarea{
+text-align: center;
+margin-top: 50px;
+width:100%;
+height:80%;
+
+
+}
+.menu1{
+	
+	background:black;
+	margin:0px;
+	color:blue;
+	border:none;
+}
+	

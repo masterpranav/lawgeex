@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid header">
+<div class="container">
+<div class="row">
+
+<h2>Myadvo</h2>
+<h2>Login</h2>
+</div>
+</div>
+</div>
+	<form method="post">
+		{% csrf_token %}
+		<div class="container-fluid">
+<div class="container">
+<div class="row">
+<div class="col-md-4 ">
+	</div>
+<div class="col-md-4 login">
+<div class="row">
+<div class="col-md-4 color">
+username
+</div>
+<div class="col-md-8">
+<input type="text" name="username" value="" class="loginid" required>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 color">
+password
+</div>
+<div class="col-md-8">
+<input type="password" name="password" value="" class="loginid" required>
+</div>
+</div>
+<div class="row text-center">
+<div class="col-md-4 color">
+
+</div>
+<div class="col-md-4">
+<input type="submit" name="submit" value="login" class="btn_margin btn btn-primary btn-lg active">
+</div>
+<div class="col-md-4 color">
+
+</div>
+</div>
+</div>
+<div class="col-md-4 "></div>
+
+</div>
+</div>
+</div>
+	</form>
+{% endblock %}

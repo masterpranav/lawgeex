@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+  crossorigin="anonymous">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous">
+  </script>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}" type="text/css">
+		<link rel="stylesheet" href="{% static 'accounts/css/font-awesome.css' %}" type="text/css">
+	   <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1">
+    {% block head %}
+		<title>Base</title>
+		{% endblock %}
+	</head>
+	<body>
+		<br>
+		<div class="container">
+		<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+          {% if user.is_authenticated %}
+            <ul class="nav navbar-nav">
+            	<li><a href="/account/home">Home</a></li>
+            	<li><a href="{% url 'logout' %}">Logout</a></li>
+            	<li><a href="{% url 'view_profile' %}">Profile</a></li>
+            	<li><a href="{% url 'edit_profile' %}">Edit Profile</a></li>
+            	<li><a href="{% url 'change_password' %}">Change Passwor</a></li>
+              <li><a href="/inbox/notifications">Notification</a></li>
+            </ul>
+            {% else %}
+						<ul class="nav navbar-nav">
+							<li><a href="{% url 'reset_password' %}">Reset Password</a></li>
+						</ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+              </ul>
+            {% endif %}
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+		</div>
+		{% block body %}
+			<!-- <h1>Base</h1> -->
+
+		{% endblock %}
+		<div class="container-fluid footer">
+			<div class="container">
+				<div class="row">
+					<h1>www.myadvo.in</h1>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

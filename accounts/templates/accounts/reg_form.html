@@ -1,0 +1,115 @@
+{%extends 'base.html' %}
+	{% block body %}
+	<div class="container">
+		<h1>Register</h1>	
+		<form method='post'>
+			{% csrf_token %}
+			<div class="container-fluid">
+
+			<div class="container">
+			<div class="row">
+			<div class="col-md-2 ">
+			</div>
+			<div class="col-md-8">
+			<div class="navbar navbar-inverse menu menu1">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<div class="clearfix"></div>
+			<div class="collapse navbar-collapse" id="mynavbar">
+			</div>
+			</div>
+			</div>
+			<div class="col-md-2 ">
+			</div>
+			</div>
+			</div>
+			</div>
+
+
+			<div class="container-fluid section">
+			<div class="container">
+			<div class="row">
+			<div class="col-md-4 ">
+				</div>
+			<div class="col-md-4 login">
+			<div class="row">
+			<div class="col-md-4 color">
+			Username
+			</div>
+			<div class="col-md-8">
+			<input type="text" name="username" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Firstname
+			</div>
+			<div class="col-md-8">
+			<input type="text" name="first_name" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Lastname
+			</div>
+			<div class="col-md-8">
+			<input type="text" name="last_name" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Email
+			</div>
+			<div class="col-md-8">
+			<input type="Email" name="email" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Password
+			</div>
+			<div class="col-md-8">
+			<input type="password" name="password1" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Confirm password
+			</div>
+			<div class="col-md-8">
+			<input type="password" name="password2" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row text-center">
+			<div class="col-md-4 color">
+
+			</div>
+			<div class="col-md-4">
+			<input type="submit" name="submit" value="Register" class="btn_margin"> 
+			</div>
+			<div class="col-md-4 color">
+
+			</div>
+			</div>	
+			</div>
+			<div class="col-md-4 "></div>
+
+			</div>
+			</div>
+			</div>
+
+		</form>
+		<div class="container-fluid footer">
+		<div class="container">
+		<div class="row">
+		<h1>www.myadvo.in</h1>
+
+		</div>
+		</div>
+		</div>
+	</div>
+	{% endblock %}
+

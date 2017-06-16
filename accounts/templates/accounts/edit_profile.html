@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block head %}
+	<title>Profile</title>
+{% endblock %}
+{% block body %}
+<div class="container-fluid header">
+			<div class="container">
+			<div class="row">
+
+			<h2>Myadvo</h2>
+			<h2>Edit Profile</h2>
+			</div>
+			</div>
+</div>
+<div class="container">
+	<form method="post">
+		{% csrf_token %}
+		
+
+
+			<div class="container-fluid ">
+			<div class="container">
+			<div class="row">
+			<div class="col-md-4 ">
+				</div>
+			<div class="col-md-4 login">
+
+			<div class="row">
+			<div class="col-md-4 color">
+			Email
+			</div>
+			<div class="col-md-8">
+			<input type="Email" name="email" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Firstname
+			</div>
+			<div class="col-md-8">
+			<input type="text" name="first_name" value="" class="loginid"> 
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-4 color">
+			Lastname
+			</div>
+			<div class="col-md-8">
+			<input type="text" name="last_name" value="" class="loginid"> 
+			</div>
+			</div>
+
+
+			<div class="row text-center">
+			<div class="col-md-4 color">
+
+			</div>
+			<div class="col-md-4">
+			<input type="submit" name="submit" value="update" class="btn_margin"> 
+			</div>
+			<div class="col-md-4 color">
+
+			</div>
+			</div>	
+			</div>
+			<div class="col-md-4 "></div>
+
+			</div>
+			</div>
+			</div>
+	</form>
+		<br> 
+	<div class="container-fluid footer">
+	<div class="container">
+	<div class="row">
+	<h1>www.myadvo.in</h1>
+
+	</div>
+	</div>
+	</div>
+</div>
+{% endblock %}

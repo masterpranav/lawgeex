@@ -1,0 +1,7 @@
+Django==1.11
+textract
+pytesseract
+Image
+docx
+django-hosts
+django-notifications-hq
