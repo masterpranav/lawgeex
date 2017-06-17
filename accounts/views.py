@@ -95,7 +95,7 @@ def notify_handler(verb, **kwargs):
 # connect the signal
 notify.connect(notify_handler, dispatch_uid='notifications.models.notification')
 
-@login_required
+#@login_required
 def home(request):
 	form = DocumentForm(request.POST or None, request.FILES or None)
 	if form.is_valid():
@@ -115,7 +115,7 @@ def home(request):
 		
 		#notify_handler("has uploaded a document",arg)
 		notify.connect(notify_handler, dispatch_uid='notifications.models.notification')
-		notify.send(request.user,recipient=a,verb="have uploaded")
+		notify.send(request.user,recipient=a,verb="has uploaded a doc")
 		#post_save.connect (sender=Notification)
 		#print "Signal executed"
 		if instance.doc.url.endswith(".pdf"):
@@ -139,16 +139,16 @@ def register(request):
 	if form.is_valid():
 		instance = form.save(commit=False)
 		instance.save()
-		return redirect('/account')
+		return redirect('/account/')
 	args={'form':form}
 	return render(request,'accounts/reg_form.html',args)
 
-@login_required
+#@login_required
 def view_profile(request):
 	args={'user': request.user}
 	return render(request, 'accounts/profile.html', args)
 
-@login_required
+#@login_required
 def edit_profile(request):
 	if request.method=='POST':
 		form = EditProfileForm(request.POST, instance=request.user)
@@ -162,7 +162,7 @@ def edit_profile(request):
 		args = {'form': form}
 		return render(request,'accounts/edit_profile.html', args)
 
-@login_required
+#@login_required
 def change_password(request):
 	if request.method=='POST':
 		form = PasswordChangeForm(data=request.POST, user=request.user)

@@ -24,7 +24,8 @@ class PcURLManager(models.Manager):
 			print q.id
 			q.save()
 			new_codes+=1
-		return "New codes made: {i}".format(i=new_codes)		
+		return "New codes made: {i}".format(i=new_codes)
+
 class PcURL(models.Model):
 	url=models.CharField(max_length=220,validators=[validate_url,validate_dot_com])
 	shortcode=models.CharField(max_length=SHORTCODE_MAX,unique=True,blank=True)
